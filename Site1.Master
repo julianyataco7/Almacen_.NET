@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Practicando_parcial.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, section, aside {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px; /* Ajusta según sea necesario */
+        }
+
+        footer {
+            margin-top: auto; /* Empuja el pie de página hacia abajo */
+            background-color: #3396FF;
+            color: #FFFFFF;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+             <div>
+                
+            </div>
+        </header>
+
+           
+        <seccion>
+            <asp:ContentPlaceHolder   ID="MainContent" runat="server"   />
+        </seccion>
+
+        <aside>
+            <asp:ContentPlaceHolder   ID="DetailContent" runat="server"   />
+        </aside>
+
+        <footer>
+             <asp:ContentPlaceHolder   ID="FooterContent" runat="server"   />
+            <p>&copy; <%: DateTime.Now.Year%> Monitoreo.SAC</p>
+        </footer>
+    </form>
+</body>
+</html>
